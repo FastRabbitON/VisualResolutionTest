@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Perception</title>
+</head>
+
+<body>
+
+    <div id="settingContainer" class="settingContainer">
+
+        <div class="mainSettingContainer">
+            <div class="leftContainer">
+
+                <div class="userSettings">
+                    <div class="title"> User Name</div>
+                    <input id="user" type="text" value="UserOne" placeholder="User Name" onchange="VariableChange()">
+                </div>
+
+                <div class="firstPositionSettings">
+                    <div class="title">Start Position [px]</div>
+                    <select id="firstPosition" type="number" onchange="VariableChange()">
+                        <option value="0">0</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                    </select>
+                </div>
+
+                <div class="timePresentationSettings">
+                    <div class="title">Time presentation [ms]</div>
+                    <input id="timePresentation" type="number" value="2000" onchange="VariableChange()">
+                </div>
+                <div class="timeGapSettings">
+                    <div class="title">Time gap [ms]</div>
+                    <input id="timeGap" type="number" value="500" onchange="VariableChange()">
+                </div>
+
+
+                <div class="moveTypeSettings">
+                    <div class="title">Algorithm</div>
+                    <select id="moveType" type="text" onchange="VariableChange()">
+                        <option value="1">1D1U</option>
+                        <option value="2">2D1U</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="rightContainer">
+
+
+                <div class="shapeSettings">
+                    <div class="title">Shape</div>
+                    <div class="radioShape">
+                        <input class="radioS" type="radio" id="radioS" value="square" name="shapes"
+                            onchange="VariableChange()" checked>
+                        <label for="radioS">🟥</label>
+                        <input class="radioT" type="radio" id="radioT" value="triangle" name="shapes"
+                            onchange="VariableChange()">
+                        <label for="radioT">🔺</label>
+                        <input class="radioC" type="radio" id="radioC" value="circle" name="shapes"
+                            onchange="VariableChange()">
+                        <label for="radioC">🔴</label>
+                    </div>
+                </div>
+
+                <div class="sizeXSettings">
+                    <div class="title">Dimention X [px]</div>
+                    <input id="sizeX" type="number" value="300" onchange="VariableChange()">
+                </div>
+
+                <div class="sizeYSettings">
+                    <div class="title">Dimention Y [px]</div>
+                    <input id="sizeY" type="number" value="300" onchange="VariableChange()">
+                </div>
+
+                <div class="colorSettings">
+                    <div class="title">Shape Color</div>
+                    <select id="color" type="text" onchange="VariableChange()">
+                        <option value="red">RED</option>
+                        <option value="green">GREEN</option>
+                        <option value="blue">BLUE</option>
+                    </select>
+                </div>
+
+                <div class="RoundSettings">
+                    <div class="title">Round Number</div>
+                    <input id="round" type="number" value="15" onchange="VariableChange()">
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="containerBtn">
+            <button class="StartBtn" id="StartBtn" onclick="StartFunction()">Start</button>
+            <button class="DefaultBtn" id="DefaultBtn" onclick="VariableReset()">Default</button>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div id="mainContainer" class="mainContainer off">
+
+        <div id="stimulusContainer" class="stimulusContainer"></div>
+
+        <div id="answerButtonsContainer" class="answerButtonsContainer">
+            <div class="title">SAME POSITION?
+                <div>
+                    <button id="YesBtn" onclick="YesAnswer()">YES</button>
+                    <button id="NoBtn" onclick="NoAnswer()">NO</button>
+                </div>
+            </div>
+
+            <div class="StopContainer">
+                <button id="Stop" onclick="VariableReset()">STOP</button>
+            </div>
+
+            <div id="saveRend" class="saveRend"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

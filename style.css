@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    cursor: pointer;
+}
+
+title{
+    cursor: default;
+}
+
+.mainContainer {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: bisque; */
+    overflow: hidden;
+}
+
+.mainContainer.off {
+    display: none;
+}
+
+.stimulusContainer {
+    width: 100%;
+    height: 90%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+}
+
+.answerButtonsContainer{
+    padding: 1rem 1rem;
+    height: 10%;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.answerButtonsContainer .title{
+    font-size: 2rem;
+}
+
+.answerButtonsContainer button{
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.answerButtonsContainer .saveBtn{
+    margin-left: 5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.answerButtonsContainer button:hover{
+    background-color: lightgray;
+}
+
+
+/* SETTING CONTAINER */
+.settingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+
+}
+
+.settingContainer.off {
+    display: none;
+}
+
+.mainSettingContainer {
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+.leftContainer, .rightContainer {
+    width: 50%;
+    height: 100%;
+    border-bottom: 0.2rem solid lightgray;
+}
+
+.leftContainer {
+    border-right: 0.2rem solid lightgray;
+}
+
+.containerBtn {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainSettingContainer input, .mainSettingContainer select {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 0.2rem solid black;
+}
+
+.mainSettingContainer select{
+ cursor: pointer;
+}
+
+.StartBtn, .DefaultBtn{
+    font-size: 2rem;
+    margin: 0 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out
+}
+
+.StartBtn:hover, .DefaultBtn:hover {
+    background-color: white;
+    transition: all 0.3s ease-in-out
+}
+
+.mainSettingContainer .title {
+    margin-bottom: 0.3rem;
+    font-size: 2.5rem;
+}
+
+.userSettings,
+.firstPositionSettings,
+.timePresentationSettings,
+.timeGapSettings,
+.moveTypeSettings,
+.shapeSettings,
+.sizeXSettings,
+.sizeYSettings,
+.colorSettings,
+.RoundSettings {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shapeSettings {
+    position: relative;
+}
+
+.shapeSettings title {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.radioShape input[type="radio"] {
+    display: none;
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(0, 0, 0, 0.52);
+}
+
+.radioShape label {
+    display: inline-block;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 4.5rem;
+    cursor: pointer;
+    
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+
+.radioShape input[type="radio"]:checked+label {
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(0, 0, 0, 0.52);
+}
+
+#square {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    left: 0px
+}
+
+#circle {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: red;
+    left: 0px
+}
+
+:root{
+    --triangleColor: red;
+    --triangleWidth : 300px;
+    --triangleHeight : 150px;
+}
+
+#triangle {
+    display: block;
+    position: relative;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-left: var(--triangleHeight) solid transparent;
+    border-right: var(--triangleHeight) solid transparent;
+    border-bottom: var(--triangleWidth) solid var(--triangleColor);
+}
