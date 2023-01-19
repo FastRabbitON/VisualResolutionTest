@@ -1,1 +1,1 @@
-# VisualResolutionTest
+# Visual Resolution Test
