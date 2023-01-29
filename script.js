@@ -50,7 +50,7 @@ const TimeBetweenRounds = Number(2000); //Czas między rundami
 
 var AvailablePosition = [0, 2, 5, 10, 20, 30, 40, 50, 100, 200];
 
-var SecondMove = 9 //Wybiera pozycje z arraya AvailablePosition dla poruszania drugim shapem !!!!!!
+var SecondMove = 7 //Wybiera pozycje z arraya AvailablePosition dla poruszania drugim shapem !!!!!!
 
 const Render = document.getElementById("stimulusContainer");
 const PreViewRender = document.getElementById("PreView");
