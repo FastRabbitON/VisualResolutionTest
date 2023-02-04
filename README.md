@@ -20,7 +20,7 @@ Simple program with many option to check visual ability and eyes perception.
 
 ## Instruction
  1. After open program there will be main screen with options:
-  ![Alt text](https://github.com/FastRabbitON/FastRabbitON/blob/main/MainScreen.png "MainScreen")
+  ![Alt text](https://github.com/FastRabbitON/FastRabbitON/blob/main/MainScreenVis.png "MainScreen")
  2. Change the option that you are intrested in and click **Start** button
  3. On screen will appear two shapes one after the other, you must answer if they were in the same position
  4. After all rounds will appear **Save Results** button, click it to save your results in excel
@@ -29,7 +29,7 @@ Simple program with many option to check visual ability and eyes perception.
 ## Additional Informations
 The program was used at the university to conduct a psychophysical experiment: Visual resolution. \
 Selected result:
-![Alt text](https://github.com/FastRabbitON/FastRabbitON/blob/main/GraphResult.png "GraphResult")
+![Alt text](https://github.com/FastRabbitON/FastRabbitON/blob/main/GraphResultVis.png "GraphResult")
 
 ## Technologies Used
 - HTML
