@@ -13,6 +13,8 @@
 ## General Information
 Simple in use program to create own visual abilities and perceptions test. Thanks to the many options you can adjust designet test to your own.
 
+![Alt text](https://github.com/FastRabbitON/FastRabbitON/blob/main/GifVisual.gif)
+
 ## How to run
 1. Download the entire repository
 2. Unzip in a folder
